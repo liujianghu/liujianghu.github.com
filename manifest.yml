@@ -1,10 +1,10 @@
 ---
-name : "hooligan"
-website :  "https://github.com/dhulihan/hooligan"
-git_url : "https://github.com/dhulihan/hooligan.git"
-source_url : "https://github.com/dhulihan/hooligan"
-description :  "A low-lit fully responsive theme for Jekyll + Jekyll-Bootstrap."
+name : the-program
+website :  http://layouts-the.me.s3-website-us-east-1.amazonaws.com/themes/the-program/
+description :  "A minimumlist theme for Jekyll + Jekyll-Bootstrap."
+git_url : git://github.com/jekyllbootstrap/theme-the-program.git
+source_url : https://github.com/jekyllbootstrap/theme-the-program
 author:
-  name : "Dave Hulihan"
-  email : "dhulihan@gmail.com"
-  website : "http://www.hulihanapplications.com/"
+  name : Yuya Saito
+  email : cssradar@gmail.com
+  website : http://css.studiomohawk.com/
