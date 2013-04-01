@@ -752,17 +752,26 @@ h6{ font-size: 20px; }
 #posts h1 a{
 	display: block;
 	margin-bottom: 20px;
-	width: 514px;
 	text-decoration: none;
 	color: #51565b;
 }
 
+#posts post-title a{
+	display: block;
+	float: left;
+	margin-bottom: 20px;
+	text-decoration: none;
+	color: #51565b;
+	width: 90%
+}
+
 #posts .n-comments{
+	float: right;
 	display: block;
 	position: absolute;
 	top: 10px;
 	right:0px;
-	width: 57px;
+	width: 8%;
 	height: 41px;
 	font-size: 14px;
 	color: #fff;

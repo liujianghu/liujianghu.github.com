@@ -7,8 +7,10 @@ tagline: by Lake
 
   {% for post in site.posts %}
     <div class="post">
-        <h1>
-            <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h1>
+        <div class="post-title">
+            <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+        </div>
+        
         <div class="n-comments">
             165</div>
         <!-- shadow -->
