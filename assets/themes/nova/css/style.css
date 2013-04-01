@@ -839,9 +839,8 @@ h6{ font-size: 20px; }
 
 #posts .post .read-more{
 	display: block;
-	position: absolute;
 	bottom: -18px;
-	left: 260px;
+	width: 110px;
 }
 
 #posts .post .meta a{
