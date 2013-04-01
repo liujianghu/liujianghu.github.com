@@ -27,12 +27,21 @@ tagline: By Lake
                     </li>
                 </ul>
                 <!-- ENDS meta -->
-                <a href="single.html" class="cover">
-                    <img src="img/dummies/596x270.gif" alt="Feature image" /></a>
+                <a class="cover">
+                    Are you going to Scarborough Fair
+                    Parsley, sage, rosemary and thyme
+                    Remember me to one who lives there
+                    He was once a true love of mine
+
+                    Tell him to make me a cambric shirt
+                    Parsley, sage, rosemary and thyme
+                    Without no seams nor needle work
+                    Then he'll be a true love of mine
+                   </a>
             </div>
             <!-- ENDS post-thumb -->
             <div class="the-excerpt">
-                Pellentesque habitant 
+                <strong>Posted on</strong> {{ post.date | date_to_string }} 
             </div>
             <a href="{{ BASE_PATH }}{{ post.url }}" class="read-more link-button"><span>Read more</span></a>
         </div>
