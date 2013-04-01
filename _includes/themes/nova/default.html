@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="{{ ASSET_PATH }}/css/style.css" rel="stylesheet" media="screen">
+    <link href="{{ ASSET_PATH }}/css/superfish.css" rel="stylesheet" type="text/css" media="screen">
+
+    <!-- atom & rss feed -->
+    <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div id="header">
+        <div class="wrapper">
+            <a href="{{ HOME_PATH }}">
+                {{ site.title }}</a>
+            <div class="top-search">
+                <form method="get" id="searchform" action="#">
+                <div>
+                    <input type="text" value="Search..." name="s" id="s" onfocus="defaultInput(this)"
+                        onblur="clearInput(this)" />
+                    <input type="submit" id="searchsubmit" value=" " />
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="menu">
+        <!-- ENDS menu-holder -->
+        <div id="menu-holder">
+            <!-- wrapper-menu -->
+            <div class="wrapper">
+                <!-- Navigation -->
+                <ul id="nav" class="sf-menu">
+                    <li class="current-menu-item"><a href="{{ HOME_PATH }}">Home<span class="subheader">Home</span></a></li>
+                    {% assign pages_list = site.pages %}
+                    {% assign group = 'navigation' %}
+                    {% include JB/pages_list %}
+                </ul>
+                <!-- Navigation -->
+            </div>
+            <!-- wrapper-menu -->
+        </div>
+        <!-- ENDS menu-holder -->
+    </div>
+
+    <div id="main">
+        <!-- wrapper-main -->
+        <div class="wrapper">
+            <!-- content -->
+            <div id="content">
+                <!-- title -->
+                <div id="page-title">
+                    <span class="title">The Blog</span> <span class="subtitle">Donec eu libero sit amet
+                        quam egestas semper.</span>
+                </div>
+                <!-- ENDS title -->
+                <!-- Posts -->
+                <div id="posts">
+                    <div class="post">
+                        <h1>
+                            <a href="single.html">Lorem ipsum dolor amet</a></h1>
+                        <div class="n-comments">
+                            165</div>
+                        <!-- shadow -->
+                        <div class="thumb-shadow">
+                            <!-- post-thumb -->
+                            <div class="post-thumbnail">
+                                <!-- meta -->
+                                <ul class="meta">
+                                    <li><strong>Posted on</strong> Dec 27th 2011 </li>
+                                    <li><strong>By</strong> <a href="#">Ansimuz</a></li>
+                                    <li><strong>Posted in</strong>
+                                        <div class="meta-tags">
+                                            <a href="#">Webdesign</a> <a href="#">Code</a> <a href="#">Photo</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- ENDS meta -->
+                                <a href="single.html" class="cover">
+                                    <img src="img/dummies/596x270.gif" alt="Feature image" /></a>
+                            </div>
+                            <!-- ENDS post-thumb -->
+                            <div class="the-excerpt">
+                                Pellentesque 
+                            </div>
+                            <a href="single.html" class="read-more link-button"><span>Read more</span></a>
+                        </div>
+                        <!-- ENDS shadow -->
+                    </div>
+                </div>
+                <!-- ENDS Posts -->
+                <!-- sidebar -->
+                <ul id="sidebar">
+                    <!-- init sidebar -->
+                    <li>
+                        <h6>
+                            Categories</h6>
+                        <ul>
+                            <li class="cat-item"><a href="#" title="View all posts">Pellentesque habitant morbi</a></li>
+                            <li class="cat-item"><a href="#" title="View all posts">Pellentesque habitant morbi</a></li>
+                            <li class="cat-item"><a href="#" title="View all posts">Pellentesque habitant morbi</a></li>
+                            <li class="cat-item"><a href="#" title="View all posts">Pellentesque habitant morbi</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h6>
+                            Archives</h6>
+                        <ul>
+                            <li class="cat-item"><a href="#" title="View all posts">Pellentesque habitant morbi</a></li>
+                            <li class="cat-item"><a href="#" title="View all posts">Pellentesque habitant morbi</a></li>
+                            <li class="cat-item"><a href="#" title="View all posts">Pellentesque habitant morbi</a></li>
+                            <li class="cat-item"><a href="#" title="View all posts">Pellentesque habitant morbi</a></li>
+                        </ul>
+                    </li>
+                    <!-- ENDS init sidebar -->
+                </ul>
+                <!-- ENDS sidebar -->
+                <!-- pagination -->
+                <div class="clear">
+                </div>
+                <ul class='pager'>
+                    <li class='first-page'><a href='#'>&laquo;</a></li>
+                    <li><a href='#'>&lsaquo;</a></li>
+                    <li><a href='#'>2</a></li>
+                    <li><a href='#'>3</a></li>
+                    <li class='active'><a href='#'>4</a></li>
+                    <li><a href='#'>5</a></li>
+                    <li><a href='#'>6</a></li>
+                    <li><a href='#'>&rsaquo;</a></li>
+                    <li class='last-page'><a href='#'>&raquo;</a></li>
+                </ul>
+                <!-- ENDS pagination -->
+            </div>
+            <!-- ENDS content -->
+        </div>
+        <!-- ENDS wrapper-main -->
+    </div>
+
+    <div class="container-narrow">
+
+      <div class="content">
+        {{ content }}
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div>
+
+    {% include JB/analytics %}
+  </body>
+</html>
