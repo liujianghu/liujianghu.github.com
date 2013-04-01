@@ -29,8 +29,9 @@ tagline: by Lake
             <!-- ENDS post-thumb -->
             <div class="the-excerpt">
                 <strong>Posted on</strong> {{ post.date | date_to_string }} 
+                <a href="{{ BASE_PATH }}{{ post.url }}" class="read-more link-button"><span>Read more</span></a>
             </div>
-            <a href="{{ BASE_PATH }}{{ post.url }}" class="read-more link-button"><span>Read more</span></a>
+            
         </div>
         <!-- ENDS shadow -->
     </div>
