@@ -558,9 +558,8 @@ h6{ font-size: 20px; }
 
 #projects-list .project .read-more{
 	display: block;
-	position: absolute;
 	bottom: -17px;
-	left: 160px;
+	widows: 100px
 }
 
 /* PROJECT --------------------------------------------------------*/
@@ -804,11 +803,11 @@ h6{ font-size: 20px; }
 	padding-bottom: 40px;
 	background: url(../img/post-divider.png) center bottom no-repeat;
 }
-#posts .post .the-excerpt.left{
-	float: :left: ;
-	width: 60%
+#posts .post .the-excerpt .left{
+	float: :left;
+	width: 60%;
 }
-#posts .post .the-excerpt.right{
+#posts .post .the-excerpt .right{
 	float: right;
 	width: 38%;
 	text-align: center;
