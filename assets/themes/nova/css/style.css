@@ -804,12 +804,12 @@ h6{ font-size: 20px; }
 	background: url(../img/post-divider.png) center bottom no-repeat;
 }
 #posts .post .the-excerpt .left{
-	float: :left;
-	width: 60%;
+	float: left;
+	width: 73%;
 }
 #posts .post .the-excerpt .right{
 	float: right;
-	width: 38%;
+	width: 25%;
 	text-align: center;
 }
 
