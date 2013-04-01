@@ -6,7 +6,6 @@ tagline: by Lake
 {% include JB/setup %}
 
 <div id="posts">
-  11111111111
   {% for post in site.posts %}
     <div class="post">
         <h1>
