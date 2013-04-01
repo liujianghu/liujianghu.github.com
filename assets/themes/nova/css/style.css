@@ -784,7 +784,7 @@ h6{ font-size: 20px; }
 #posts .post .post-thumbnail{
 	position: relative;
 	overflow: hidden;
-	width: 596px;
+	width: 95%;
 	height: 270px;
 	margin-bottom: 20px;
 	background: #f1f1f1;
