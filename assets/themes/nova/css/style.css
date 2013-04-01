@@ -804,6 +804,15 @@ h6{ font-size: 20px; }
 	padding-bottom: 40px;
 	background: url(../img/post-divider.png) center bottom no-repeat;
 }
+#posts .post .the-excerpt.left{
+	float: :left: ;
+	width: 60%
+}
+#posts .post .the-excerpt.right{
+	float: right;
+	width: 38%;
+	text-align: center;
+}
 
 #posts .post .post-thumbnail .meta{
 	display: block;
