@@ -28,8 +28,12 @@ tagline:
             </div>
             <!-- ENDS post-thumb -->
             <div class="the-excerpt">
-                <strong>Posted on</strong> {{ post.date | date_to_string }} 
-                <a href="{{ BASE_PATH }}{{ post.url }}" class="read-more link-button"><span>Read more</span></a>
+                <div class="left">
+                    <strong>Posted on</strong> {{ post.date | date_to_string }} 
+                </div>
+                <div class="right">
+                    <a href="{{ BASE_PATH }}{{ post.url }}" class="read-more link-button"><span>Read more</span></a>
+                </div>
             </div>
             
         </div>
