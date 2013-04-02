@@ -751,7 +751,7 @@ h6{ font-size: 20px; }
 
 #posts.single .post h1{
 	display: block;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	text-decoration: none;
 	color: #51565b;
 }
@@ -784,7 +784,7 @@ h6{ font-size: 20px; }
 
 .post .thumb-shadow{
 	top: 30px;
-	background: url(../img/shadow-blog.png) no-repeat 0px 270px;
+	background: url(../img/shadow-blog.png) no-repeat 0px 100%;
 }
 
 #posts .post .post-thumbnail{
