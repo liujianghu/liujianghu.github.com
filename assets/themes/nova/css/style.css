@@ -952,11 +952,12 @@ h6{ font-size: 20px; }
 #content .comments-pagination {
 	clear:both;
 	overflow: hidden;
-	padding:20px 0;
+	padding:10px 0;
 	position:relative;
 	font-size:11px;
 	line-height:13px;
 	margin-bottom: 10px;
+	text-align: center;
 }
  
 #content .comments-pagination span,
