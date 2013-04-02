@@ -797,6 +797,10 @@ h6{ font-size: 20px; }
 	border-radius: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
+	font-size: 12px;
+	left: 10px;
+	top: 10px;
+	bottom: 10px;
 }
 
 
