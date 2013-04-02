@@ -38,9 +38,9 @@ tagline:
         {% endif %}
 
         {% for count in paginator.total_pages %}
-            <% if count == paginator.pager %>
+            {% if count == paginator.pager %}
                 <li class='active'>{{count}}</li>
-            <% else %>
+            {% else %}
                 <li><a href='/page{{count}}'>{{count}}</a></li>
             {% endif %}
         {% endif %}
