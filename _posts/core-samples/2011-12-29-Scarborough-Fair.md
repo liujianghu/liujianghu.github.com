@@ -1,10 +1,14 @@
 ---
 layout: post
-category : Tool
+category : Life
 tagline: 
-tags : [刘江湖, Tool, tutorial]
+tags : [莎拉.布莱曼, Sarah Brightman, Music]
 ---
 {% include JB/setup %}
+
+
+斯卡布罗集市<br/>
+演唱:Sarah Brightman(莎拉.布莱曼)<br/>
 
 Are you going to Scarborough Fair(你们正要去斯卡博洛市集吗?) <br/>
 Parsley, sage, rosemary and thyme(荷兰芹、鼠尾草、迷迭香和百里香)<br/>
