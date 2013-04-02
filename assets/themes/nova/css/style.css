@@ -798,6 +798,9 @@ h6{ font-size: 20px; }
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	font-size: 14px;
+	text-indent: 2
+	padding:5px;
+	margin-left: 10px;
 }
 
 
