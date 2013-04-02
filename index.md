@@ -39,24 +39,3 @@ tagline: by Lake
         <!-- ENDS shadow -->
     </div>
   {% endfor %}
-
-<div class="clear">
-    </div>
-    <ul class='pager'>
-        <li class='first-page'><a href='/page1'>Frist</a></li>
-        {% if paginator.previous_page %}
-            <li><a href='/page{{paginator.previous_page}}'>Previous</a></li>
-        {% endif %}
-        {% for count in paginator.total_pages%}
-            <% if count == paginator.pager %>
-                <li class='active'>{{count}}</li>
-            <% else %>
-                <li><a href='/page{{count}}'>{{count}}</a></li>
-            {% endif %}
-        {% endif %}
-        {% if paginator.next_page %}
-            <li><a href='#'>Next</a></li>
-        {% endif %}
-        <li class='last-page'><a href='/page{{paginator.total_pages}}'>Last</a></li>
-</ul>
-

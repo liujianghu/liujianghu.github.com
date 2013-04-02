@@ -36,7 +36,8 @@ tagline:
         {% if paginator.previous_page %}
             <li><a href='/page{{paginator.previous_page}}'>Previous</a></li>
         {% endif %}
-        {% for count in paginator.total_pages%}
+
+        {% for count in paginator.total_pages %}
             <% if count == paginator.pager %>
                 <li class='active'>{{count}}</li>
             <% else %>
