@@ -38,14 +38,14 @@ tagline:
         {% endif %}
 
         {% for count in paginator.total_pages %}
-            {% if count == paginator.pager %}
+            {% if count == paginator.page %}
                 <li class='active'>{{count}}</li>
             {% else %}
                 <li><a href='/page{{count}}'>{{count}}</a></li>
             {% endif %}
         {% endif %}
         {% if paginator.next_page %}
-            <li><a href='#'>Next</a></li>
+            <li><a href='/page{{paginator.next_page}}'>Next</a></li>
         {% endif %}
         <li class='last-page'><a href='/page{{paginator.total_pages}}'>Last</a></li>
     </ul>
