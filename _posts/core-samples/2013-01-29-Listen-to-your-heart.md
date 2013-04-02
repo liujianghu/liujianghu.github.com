@@ -1,7 +1,7 @@
 ---
 layout: post
 category : Life
-summary: I know there's something in the wake of your smile.
+summary: I know there's something in the wake of your smile.<br/>But listen to your heart.
 tags : [Lionel Richie, Listen To Your Heart, Music]
 ---
 {% include JB/setup %}
