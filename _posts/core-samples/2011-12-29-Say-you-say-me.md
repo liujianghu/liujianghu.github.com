@@ -1,7 +1,7 @@
 ---
 layout: post
 category : Life
-tagline: 
+Summary: This is an old song, and it's very nice. I suggest you to look for it.
 tags : [Lionel Richie, Say you say me, Music]
 ---
 {% include JB/setup %}

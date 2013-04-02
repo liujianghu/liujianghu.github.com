@@ -1,7 +1,7 @@
 ---
 layout: post
 category : Life
-tagline: 
+summary: I know there's something in the wake of your smile.
 tags : [Lionel Richie, Listen To Your Heart, Music]
 ---
 {% include JB/setup %}
