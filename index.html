@@ -32,7 +32,9 @@ tagline:
   <div class="clear">
     </div>
     <ul class='pager'>
+        {% if paginator.total_pages != 1 %}
         <li class='first-page'><a href='/'>Frist</a></li>
+        {% endif %}
         {% if paginator.previous_page %}
             {% if paginator.previous_page == 1 %}
                 <li><a href='/'>Pre</a></li>
@@ -41,15 +43,17 @@ tagline:
             {% endif %}
         {% endif %}
 
-        {% if 1 == paginator.page %}
-            <li class='active'><a href='/'>1</a></li>
-        {% else %}
-            <li><a href='/'>1</a></li>
+        {% if paginator.total_pages != 1 %}
+            {% if 1 == paginator.page %}
+                <li class='active'><a href='/'>1</a></li>
+            {% else %}
+                <li><a href='/'>1</a></li>
+            {% endif %}
         {% endif %}
         {% for count in (2..paginator.total_pages) %}
             {% if count == paginator.page %}
                 <li class='active'><a href='/page{{count}}'>{{count}}</a></li>
-            {% else %}
+            {% ese %}
                 <li><a href='/page{{count}}'>{{count}}</a></li>
             {% endif %}
         {% endfor %}
