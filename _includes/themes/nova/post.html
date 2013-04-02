@@ -5,9 +5,6 @@
             {{ page.title }}</h1>
         <!-- shadow -->
         <div class="thumb-shadow">
-            <div class="post-thumbnail">
-                    <img src="img/dummies/596x270.gif"  alt="Feature image" />
-            </div>
             <div>
                 {{ content }}
             </div>
@@ -17,11 +14,12 @@
         <ul class="meta">
             <li><strong>Posted on</strong> {{ page.date | date_to_long_string }} </li>
             {% unless page.categories == empty %}
+              <strong>Categories</strong>
               <li>{% assign categories_list = page.categories %} {% include JB/categories_list %}</li>
             {% endunless %} 
             {% unless page.tags == empty %}
-            <li><strong>Tags</strong>
-                <div class="meta-tags">
+            <li><div class="meta-tags">
+                    <strong>Tags</strong>
                     {% assign tags_list = page.tags %} {% include JB/tags_list %} 
                 </div>
             </li>

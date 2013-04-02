@@ -40,5 +40,19 @@ tagline: by Lake
     </div>
   {% endfor %}
 
+<div class="clear">
+</div>
+<ul class='pager'>
+    <li class='first-page'><a href='#'>&laquo;</a></li>
+    <li><a href='#'>&lsaquo;</a></li>
+    <li><a href='#'>2</a></li>
+    <li><a href='#'>3</a></li>
+    <li class='active'><a href='#'>4</a></li>
+    <li><a href='#'>5</a></li>
+    <li><a href='#'>6</a></li>
+    <li><a href='#'>&rsaquo;</a></li>
+    <li class='last-page'><a href='#'>&raquo;</a></li>
+</ul>
+
 
 
