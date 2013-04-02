@@ -34,10 +34,14 @@ tagline:
     <ul class='pager'>
         <li class='first-page'><a href='/page1'>Frist</a></li>
         {% if paginator.previous_page %}
-            <li><a href='/page{{paginator.previous_page}}'>Previous</a></li>
+            {% if paginator.previous_page == 1 %}
+                <li><a href='{{ BASE_PATH }}'>Previous</a></li>
+            {% else %}
+                <li><a href='/page{{paginator.previous_page}}'>Previous</a></li>
+            {% endif %}
         {% endif %}
 
-        {% for count in paginator.total_pages %}
+        {% for count in (2..paginator.total_pages) %}
             {% if count == paginator.page %}
                 <li class='active'>{{count}}</li>
             {% else %}
@@ -47,7 +51,9 @@ tagline:
         {% if paginator.next_page %}
             <li><a href='/page{{paginator.next_page}}'>Next</a></li>
         {% endif %}
-        <li class='last-page'><a href='/page{{paginator.total_pages}}'>Last</a></li>
+        {% if paginator.total_pages != 1 %}
+            <li class='last-page'><a href='/page{{paginator.total_pages}}'>Last</a></li>
+        {% endif %}
     </ul>
 <!-- Pagination links -->
 <div class="pagination">
