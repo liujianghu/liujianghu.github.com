@@ -5,7 +5,7 @@ tagline:
 ---
 {% include JB/setup %}
 
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
     <div class="post">
         <h1>
             <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h1>
@@ -32,15 +32,19 @@ tagline:
   <div class="clear">
     </div>
     <ul class='pager'>
-        <li class='first-page'><a href='#'>&laquo;</a></li>
-        <li><a href='#'>&lsaquo;</a></li>
+        <li class='first-page'><a href='/page1'>Frist</a></li>
+        {% if paginator.previous_page %}
+            <li><a href='/page{{paginator.previous_page}}'>Previous</a></li>
+        {% endif %}
         <li><a href='#'>2</a></li>
         <li><a href='#'>3</a></li>
         <li class='active'><a href='#'>4</a></li>
         <li><a href='#'>5</a></li>
         <li><a href='#'>6</a></li>
-        <li><a href='#'>&rsaquo;</a></li>
-        <li class='last-page'><a href='#'>&raquo;</a></li>
+        {% if paginator.next_page %}
+            <li><a href='#'>Next</a></li>
+        {% endif %}
+        <li class='last-page'><a href='/page{{paginator.total_pages}}'>Last</a></li>
     </ul>
 <!-- Pagination links -->
 <div class="pagination">
