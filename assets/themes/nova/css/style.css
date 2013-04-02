@@ -745,15 +745,18 @@ h6{ font-size: 20px; }
 	border-bottom: none;
 }
 
-#posts.single .post h1{
-	background:  url(../img/tabs-divider.png) repeat-x bottom center;
-}
-
 #posts .post:last-child{
 	border-bottom: none;
 }
 
-#posts h1 a{
+#posts.single .post h1{
+	display: block;
+	margin-bottom: 20px;
+	text-decoration: none;
+	color: #51565b;
+}
+
+#posts  h1 a{
 	display: block;
 	margin-bottom: 20px;
 	text-decoration: none;
@@ -780,7 +783,7 @@ h6{ font-size: 20px; }
 }
 
 .post .thumb-shadow{
-	top: 20px;
+	top: 30px;
 	background: url(../img/shadow-blog.png) no-repeat 0px 270px;
 }
 
@@ -819,8 +822,8 @@ h6{ font-size: 20px; }
 
 #posts .post .post-thumbnail .meta{
 	display: block;
-	width: 252px;
-	height: 207px;
+	width: 90%;
+	height: 100%;
 	font-size: 12px;
 	line-height: 2em;
 	position: absolute;
