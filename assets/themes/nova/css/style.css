@@ -559,7 +559,7 @@ h6{ font-size: 20px; }
 #projects-list .project .read-more{
 	display: block;
 	bottom: -17px;
-	widows: 80px
+	widows: 90px
 }
 
 /* PROJECT --------------------------------------------------------*/
@@ -849,7 +849,7 @@ h6{ font-size: 20px; }
 #posts .post .read-more{
 	display: block;
 	bottom: -18px;
-	width: 110px;
+	width: 90px;
 }
 
 #posts .post .meta a{
