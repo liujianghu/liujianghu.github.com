@@ -745,6 +745,10 @@ h6{ font-size: 20px; }
 	border-bottom: none;
 }
 
+#posts.single .post h1{
+	background:  url(../img/tabs-divider.png) repeat-x bottom center;
+}
+
 #posts .post:last-child{
 	border-bottom: none;
 }
