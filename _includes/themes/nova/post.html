@@ -24,14 +24,14 @@
             {% endunless %}
         </ul>
         <!-- ENDS meta -->
-    </div>
-    <div class="comments-pagination">
-      {% if page.previous %}
-        <a class='prev page-numbers' href='{{ BASE_PATH }}{{ page.previous.url }}' title="{{ page.previous.title }}">&laquo; Previous</a>
-      {% endif %}
-      {% if page.next %}
-        <a class='prev page-numbers' href='{{ BASE_PATH }}{{ page.next.url }}' title="{{ page.next.title }}">&laquo; Next</a>
-      {% endif %}
+        <div class="comments-pagination">
+          {% if page.previous %}
+            <a class='prev page-numbers' href='{{ BASE_PATH }}{{ page.previous.url }}' title="{{ page.previous.title }}">&laquo; Previous</a>
+          {% endif %}
+          {% if page.next %}
+            <a class='prev page-numbers' href='{{ BASE_PATH }}{{ page.next.url }}' title="{{ page.next.title }}">&laquo; Next</a>
+          {% endif %}
+        </div>
     </div>
     <!-- ENDS post -->
     <div id="comments-block">
