@@ -14,8 +14,8 @@
         <ul class="meta">
             <li><strong>Posted on</strong> {{ page.date | date_to_long_string }} </li>
             {% unless page.categories == empty %}
-              <li><strong>Categories</strong>
-                {% assign categories_list = page.categories %} {% include JB/categories_list %}</li>
+              <strong>Categories</strong>
+                {% assign categories_list = page.categories %} {% include JB/categories_list %}
             {% endunless %} 
             {% unless page.tags == empty %}
             <li><div class="meta-tags">

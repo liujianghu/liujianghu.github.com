@@ -780,6 +780,7 @@ h6{ font-size: 20px; }
 }
 
 .post .thumb-shadow{
+	top: 20px;
 	background: url(../img/shadow-blog.png) no-repeat 0px 270px;
 }
 
