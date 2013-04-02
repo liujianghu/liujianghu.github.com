@@ -2,7 +2,7 @@
     <!-- post -->
     <div class="post">
         <h1>
-            <a href="single.html">{{ page.title }}</a></h1>
+            {{ page.title }}</h1>
         <!-- shadow -->
         <div class="thumb-shadow">
             <div class="post-thumbnail">
@@ -17,13 +17,15 @@
         <ul class="meta">
             <li><strong>Posted on</strong> {{ page.date | date_to_long_string }} </li>
             {% unless page.categories == empty %}
-            <li>{% assign categories_list = page.categories %} {% include JB/categories_list %}</li>
-            {% endunless %} {% unless page.tags == empty %}
+              <li>{% assign categories_list = page.categories %} {% include JB/categories_list %}</li>
+            {% endunless %} 
+            {% unless page.tags == empty %}
             <li><strong>Tags</strong>
                 <div class="meta-tags">
-                    {% assign tags_list = page.tags %} {% include JB/tags_list %} {% endunless %}
+                    {% assign tags_list = page.tags %} {% include JB/tags_list %} 
                 </div>
             </li>
+            {% endunless %}
         </ul>
         <!-- ENDS meta -->
     </div>
