@@ -761,14 +761,7 @@ h6{ font-size: 20px; }
 	margin-bottom: 20px;
 	text-decoration: none;
 	color: #51565b;
-}
-
-#posts  h1 div a{
-	width: 100%
-	display: block;
-	margin-bottom: 20px;
-	text-decoration: none;
-	color: #51565b;
+	width: 100px;
 }
 
 #posts .n-comments{
