@@ -11,11 +11,11 @@ tags : [golang, ubuntu, Sublime text2]
 在ubuntu下，和windows具体都差不多。  
 
 ***
-*下载[golang](https://code.google.com/p/go/downloads/list).
-*启动terminal: 切换到下载包所在的目录，输入`sudo tar -C /usr/local -xzf go1.0.2.linux-amd64.tar.gz` 解压文件到`/usr/local`目下。  
+* 下载[golang](https://code.google.com/p/go/downloads/list).
+* 启动terminal: 切换到下载包所在的目录，输入<code>sudo tar -C /usr/local -xzf go1.0.2.linux-amd64.tar.gz</code> 解压文件到`/usr/local`目下。  
 如果提示没有权限，可能需要使用命令：`sudo chmod 777 /usr/local` 赋予权限。
-*增加golang的环境变量: `sudo gedit ~/.bashrc` 打开profile文件，添加`export PATH=$PATH:/usr/local/go/bin`后保存退出。
-*输入go env，应该可以看到golang的一些具体信息了。  
+* 增加golang的环境变量: `sudo gedit ~/.bashrc` 打开profile文件，添加`export PATH=$PATH:/usr/local/go/bin`后保存退出。
+* 输入go env，应该可以看到golang的一些具体信息了。  
 
 ***
 golang的环境已经装好了，下面配置开发环境。  

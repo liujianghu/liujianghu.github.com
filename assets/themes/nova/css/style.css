@@ -785,7 +785,7 @@ h6{ font-size: 20px; }
 
 .post .thumb-shadow{
 	top: 30px;
-	font-size: 16px;
+	font-size: 18px;
 	background: url(../img/shadow-blog.png) no-repeat 0px 0%;
 }
 
@@ -799,7 +799,7 @@ h6{ font-size: 20px; }
 	border-radius: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 
