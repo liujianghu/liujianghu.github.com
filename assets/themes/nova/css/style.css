@@ -764,6 +764,7 @@ h6{ font-size: 20px; }
 }
 
 #posts  h1 div a{
+	width: 100%
 	display: block;
 	margin-bottom: 20px;
 	text-decoration: none;
