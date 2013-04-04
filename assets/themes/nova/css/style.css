@@ -763,6 +763,13 @@ h6{ font-size: 20px; }
 	color: #51565b;
 }
 
+#posts  h1 div a{
+	display: block;
+	margin-bottom: 20px;
+	text-decoration: none;
+	color: #51565b;
+}
+
 #posts .n-comments{
 	display: block;
 	position: absolute;
@@ -784,7 +791,7 @@ h6{ font-size: 20px; }
 
 .post .thumb-shadow{
 	top: 30px;
-	background: url(../img/shadow-blog.png) no-repeat 0px 100%;
+	background: url(../img/shadow-blog.png) no-repeat 0px 0%;
 }
 
 #posts .post .post-thumbnail{

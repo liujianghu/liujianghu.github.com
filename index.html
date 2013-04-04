@@ -7,8 +7,9 @@ tagline:
 
   {% for post in paginator.posts %}
     <div class="post">
-        <h1>
+        <h1><div>
             <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h1>
+            </div>
         <!-- shadow -->
         <div class="thumb-shadow">
             <!-- post-thumb -->

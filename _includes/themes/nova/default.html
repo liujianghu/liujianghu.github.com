@@ -73,9 +73,9 @@
                         <h6>
                             Categories</h6>
                         <ul>
-                            <li class="cat-item"><a href="#" title="View all posts">Category1</a></li>
-                            <li class="cat-item"><a href="#" title="View all posts">Category2</a></li>
-                            <li class="cat-item"><a href="#" title="View all posts">Category4</a></li>
+                            {% assign categories_list = site.categories %}
+                            {% include JB/categories_list %}
+                            
                             <li class="cat-item"><a href="#" title="View all posts">Category5</a></li>
                         </ul>
                     </li>
