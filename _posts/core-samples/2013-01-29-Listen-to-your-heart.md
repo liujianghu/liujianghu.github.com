@@ -6,7 +6,6 @@ tags : [Lionel Richie, Listen To Your Heart, Music]
 ---
 {% include JB/setup %}
 
-
 演唱:Wild Rose
 I know there's something in the wake of your smile.<br/>
 I get a notion from the look in your eyes, yea.<br/>
@@ -35,3 +34,4 @@ Listen to your heart when he's calling for you.<br/>
 Listen to your heart there's nothing else you can do.<br/>
 I don't know where you're going and I don't know why,<br/>
 but listen to your heart before you tell him goodbye.<br/>
+`fmt.Prinfln("Hello world!")`

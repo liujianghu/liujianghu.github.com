@@ -6,9 +6,9 @@ tags : [golang, ubuntu, Sublime text2]
 ---
 {% include JB/setup %}
 
-  
+ <br/>
 最近一直在学习golang, 之前一直是在windows平台上，所以想熟悉下linux环境的开发。  
-在ubuntu下，和windows具体都差不多。  
+在ubuntu下配置和windows思路差不多。  
 
 ***
 * 下载[golang](https://code.google.com/p/go/downloads/list).
