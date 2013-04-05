@@ -28,7 +28,7 @@
 
 body {
 	line-height: 1;
-	color: #51565b;
+	/*color: #51565b; */
 	background: #f1f1f1 url(../img/bg/patterns/noise.png);
 	font-family: Arial, Helvetica, sans-serif;
 	font-size:  100%;
