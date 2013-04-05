@@ -32,7 +32,7 @@ golang的环境已经装好了，下面配置开发环境。
 ***
 更多的安装和使用说明，可参考[官方文档](http://golang.org/doc/install)
 
-{% highlight go %}
+{% syntax go %}
 
 package main
 
@@ -62,4 +62,4 @@ func main1111() {
 		}
 	}
 }
-{% endhighlight %}
+{% syntax %}
