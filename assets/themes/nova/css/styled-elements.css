@@ -85,30 +85,7 @@
 	
 }
 
-/* HIGHLIGHT ------------------------------------------------------------*/
 
-.highlight,
-.highlight-red,
-.highlight-blue,
-.highlight-green {
-	background:yellow;
-	padding:2px 5px;
-}
-
-.highlight-red{ 
-	background: red;
-	color:#fff;
-}
-
-.highlight-blue{
-	background: blue;
-	color:#fff;
-}
-
-.highlight-green{
-	background: green;
-	color:#fff;
-}
 
 /* PULLQUOTES ------------------------------------------------------------*/
 
