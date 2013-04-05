@@ -23,9 +23,7 @@ golang的环境已经装好了，下面配置开发环境。
   
 * 下载[sulblime text](http://www.sublimetext.com/2), 解压.
 * 启动sublime text 2，安装package control: 按下control + ~ 调出Console,输入以下代码并回车  
-{% highlight go %}
-import urllib2,os;pf='Package Control.sublime-package';ipp=sublime.installed_packages_path();os.makedirs(ipp) if not os.path.exists(ipp) else None;open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read())
-{% endhighlight %}
+```import urllib2,os;pf='Package Control.sublime-package';ipp=sublime.installed_packages_path();os.makedirs(ipp) if not os.path.exists(ipp) else None;open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read())```
 * 重启 Sublime Text 2，如果在 Preferences -> Package Settings中见到Package Control这一项，就说明安装成功了。
 * 安装gosublime包：按下control + shift + P键调出命令面板，输入`install`调出`install package`选择并回车, 在之后的弹出框里输入gosublime， 并回车。安装完成后重启. 如果不想手动建立src、pkg、bin等目录，可以再安装gobuild包，之后在project下会多出个create go project， 这样就可以自动帮你创建上述几个目录。
 * 下载[gocode](https://github.com/DisposaBoy/GoSublime)包实现智能提示功能, 下载[Margo](https://github.com/DisposaBoy/MarGo)实现自动整理代码功能。使用方法:<br/>
