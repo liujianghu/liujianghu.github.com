@@ -1,34 +1,27 @@
-## Theme info
+This is a fully responsive theme for Jekyll + Jekyll-Bootstrap. It is built on top of [Twitter Bootstrap](http://twitter.github.com/bootstrap/).
 
-Theme Name: the\_program  
-Description: A minimumlist theme for [jekyll](https://github.com/mojombo/jekyll). Theming is done on [Jekyll-Bootstrap](http://jekyllbootstrap.com/).  
-Author: Yuya Saito @ cssradar@gmail.com  
-Demo URL: http://layouts-the.me.s3-website-us-east-1.amazonaws.com/themes/the-program/
-Version: 1.0
+![Screenshot](https://raw.github.com/dhulihan/hooligan/master/screenshot.png)
 
-## About the\_program
+## Installation
 
-the_program is inspired by [docco.coffee](http://jashkenas.github.com/docco/).
-Designed for documenting programming language, but you can certenly use this
-any other purpose.
+	rake theme:install git="https://github.com/dhulihan/hooligan.git" 
 
-- Design is simple so is the code behind it. You can easily customize it.
-- Built with mobile first.
-- Written with [LESS](http://lesscss.org/) so if you need to edit it, you should get [Codekit](http://incident57.com/codekit/). I use this app to develop this theme.
+## Preview
 
-## About me
+You can preview this theme at the [Jekyll-Bootstrap Theme Gallery](http://themes.jekyllbootstrap.com/preview/hooligan/).
 
-I'm Yuya Saito who is a web designer/front-end developer from Tokyo, Japan.
+## Extra Stuff
+ 
+This theme has some optional configuration support for social buttons. Just add your provider and username to `_config.yml`, like so:
 
-## How to use it?
+	author :
+	  name : John Doe
+	  email : blah@email.test 
+	  github : johndoe
+	  twitter : dhulihan
+	  feedburner : johndoe
+	  googleplus: johndoe
+	  # Whatever you specify for the linkedin option will be placed after `www.linkedin.com/in/`
+	  linkedin: johndoe
 
-There are 2 places you should go look.
-
-1. [Jekyll](https://github.com/mojombo/jekyll) / Jekyll repo page on Github
-2. [Jekyll-Bootstrap](http://jekyllbootstrap.com/) / (Almost) complete how-to and bootstrap for Jekyll created by [Jade Dominguez](http://plusjade.com/)
-
-## Code I didn't write
-
-- [Jekyll-Bootstrap](http://jekyllbootstrap.com/)  / [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/)
-- [Modernizr](http://www.modernizr.com/) / MIT/BSD license
-- [HTML5 Boilerplate](http://html5boilerplate.com/): [The Unlicense](http://unlicense.org) (aka: Public Domain)
+Icons with links to your profiles will then appear on the navbar. Your stalkers will *love* you for making things so easy!
