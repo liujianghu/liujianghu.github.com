@@ -1,6 +1,7 @@
 ---
 layout: post
 category : golang
+title: "如何在ubuntu搭建golang开发环境"
 summary: 新手在ubuntu下如何建立golang开发环境。
 tags : [golang, ubuntu, Sublime text2]
 ---
