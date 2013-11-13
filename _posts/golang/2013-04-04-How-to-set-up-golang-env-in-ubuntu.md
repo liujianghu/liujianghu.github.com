@@ -30,6 +30,7 @@ golang的环境已经装好了，下面配置开发环境。
 * 下载[gocode](https://github.com/DisposaBoy/GoSublime)包实现智能提示功能, 下载[Margo](https://github.com/DisposaBoy/MarGo)实现自动整理代码功能。使用方法:<br/>
 如果下载2个文件均是压缩包的话，解压，打开terminal， 并切换至相应目录，输入`go build`， 编译完成后会多个可执行文件，把执行文件拷至/usr/local/go/bin目录下就可以使用了。
 * 使用：在sublime text新建立一个.go文件，输入一些命令，按下control + B键，输入go build，则进行编译。
+* 安装ctags， 可以跳转到代码定义，快捷键是ctrl+., ctrl+g.
 
 ***
 更多的安装和使用说明，可参考[官方文档](http://golang.org/doc/install)
