@@ -19,23 +19,23 @@ header-img: "img/post-bg-01.jpg"
 ### 通用配置库比结构如下：
 1. 环境(Env)：对应所有的环境，还有实现父子关系。每个环境可以继承另外一个环境，如果子环境和父环境有相同的配置，则去子环境的。
     * Id
-    *Name: 环境名称
-    *ParentId: 父级环境ID
-    *Remark: 说明
+    * Name: 环境名称
+    * ParentId: 父级环境ID
+    * Remark: 说明
 2. 服务器(Server)：对应所有的服务器
-    *Id
-    *Name: 服务器的电脑名称(一定是实际的电脑名称)
-    *EnvId：所属环境
-    *IntranetIP: 内网IP
-    *Ip：外网IP
-    *Remark: 说明
+    * Id
+    * Name: 服务器的电脑名称(一定是实际的电脑名称)
+    * EnvId：所属环境
+    * IntranetIP: 内网IP
+    * Ip：外网IP
+    * Remark: 说明
 3. 键值(ConfigValue)： 对应AppSetting
-    *Id
-    *Key: 建议这个key加上命名空间以区分每个项目
-    *Value
-    *EnvId: 所属环境
-    *IsActived: 是否启用，默认为true
-    *Remark
+    * Id
+    * Key: 建议这个key加上命名空间以区分每个项目
+    * Value
+    * EnvId: 所属环境
+    * IsActived: 是否启用，默认为true
+    * Remark
 
 4. 数据库连接字符串(ConnectionString)： 对应ConnectionString
 字段和ConfigValue一样。
