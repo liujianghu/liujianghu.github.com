@@ -14,7 +14,8 @@ header-img: "img/post-bg-01.jpg"
 ## 基础表结构
 ### 环境表
 
-```csharp
+{% highlight c# linenos %}
+
 /// <summary>
 /// 这个表的意义就类似于sandbox的概念。
 /// 每个环境都可以有自己的配置值，如果当前环境没有找到对应的配置，则找到其父节环境的配置。
@@ -26,11 +27,11 @@ public class Env
     public string Name {get; set;}
     public int? ParentId {get; set;}
 }
-```
+{% endhighlight %}
 
 ### 服务器表
 
-```csharp
+{% highlight c# linenos %}
 /// <summary>
 /// 此表记录所有的服务器。
 /// </summary>
@@ -47,10 +48,10 @@ public class Server
     public string IP {get; set;}
     public string Remark {get; set;}
 }
-```
+{% endhighlight %}
 
 ### 键值配置表
-```csharp
+{% highlight c# linenos %}
   /// <summary>
   /// 对应web.config的AppSetting, 健值配置
   /// </summary>
@@ -68,10 +69,10 @@ public class Server
       public bool IsActived {get; set;}
       public string Remark {get; set;}
   }
-```
+{% endhighlight %}
 
 ### 数据库连接表
-```csharp
+{% highlight c# linenos %}
 /// <summary>
 /// 对应web.config的ConnectionString, 记录各个数据库的连接字符串
 /// </summary>
@@ -89,7 +90,7 @@ public class ConnectionString
     public bool IsActived {get; set;}
     public string Remark {get; set;}
 }
-```
+{% endhighlight %}
 ## 程序设计
 
 1. 上面几个表存储在mongodb中(可存储到任意数据库)。
@@ -97,8 +98,6 @@ public class ConnectionString
 
  获取当前服务器所在的环境
 {% highlight c# linenos %}
-
-```csharp
 public class ServerHelper
 {
     static ServerHelper()
@@ -152,11 +151,11 @@ public class ServerHelper
         ParentEnvId = env.ParentId;
     }
 }
-```
+
 {% endhighlight %}
 
 4. 获取ConfigValue的值
-```csharp
+{% highlight c# linenos %}
 
 /// <summary>
 /// 获取appsetting配置的值
@@ -352,9 +351,9 @@ public static class ConfigValueHelper
     #endregion
 
 }
-```
+{% endhighlight %}
 5. 获取ConnectionString的值
-```csharp
+{% highlight c# linenos %}
 public static class ConnectionStringHelper
 {
     static ConnectionStringHelper()
@@ -450,7 +449,7 @@ public static class ConnectionStringHelper
     }
 
 }
-```
+{% endhighlight %}
 6. 再做一个可视化后台界面，对这几个表进行增、删、改、查。
 
 ## 使用
