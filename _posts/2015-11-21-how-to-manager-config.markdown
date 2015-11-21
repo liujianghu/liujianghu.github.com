@@ -31,7 +31,8 @@ public class Env
 
 ### 服务器表
 
-{% highlight c# linenos %}
+```csharp
+
 /// <summary>
 /// 此表记录所有的服务器。
 /// </summary>
@@ -48,10 +49,11 @@ public class Server
     public string IP {get; set;}
     public string Remark {get; set;}
 }
-{% endhighlight %}
+```
 
 ### 键值配置表
-{% highlight c# linenos %}
+```csharp
+
   /// <summary>
   /// 对应web.config的AppSetting, 健值配置
   /// </summary>
@@ -69,10 +71,12 @@ public class Server
       public bool IsActived {get; set;}
       public string Remark {get; set;}
   }
-{% endhighlight %}
+```
 
 ### 数据库连接表
-{% highlight c# linenos %}
+
+```sharp
+
 /// <summary>
 /// 对应web.config的ConnectionString, 记录各个数据库的连接字符串
 /// </summary>
@@ -91,13 +95,16 @@ public class ConnectionString
     public string Remark {get; set;}
 }
 {% endhighlight %}
-## 程序设计
+```
 
 1. 上面几个表存储在mongodb中(可存储到任意数据库)。
 2. 修改每台服务器的 `C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\machine.config` 的connectionstrings节点， 增加一个connectionString, name = "config", connectionString为连接到mongodb的字符串。
 
- 获取当前服务器所在的环境
-{% highlight c# linenos %}
+3. 获取当前服务器所在的环境
+
+```csharp
+
+
 public class ServerHelper
 {
     static ServerHelper()
@@ -152,10 +159,11 @@ public class ServerHelper
     }
 }
 
-{% endhighlight %}
+```
 
 4. 获取ConfigValue的值
-{% highlight c# linenos %}
+
+```csharp
 
 /// <summary>
 /// 获取appsetting配置的值
@@ -351,9 +359,12 @@ public static class ConfigValueHelper
     #endregion
 
 }
-{% endhighlight %}
+```
+
 5. 获取ConnectionString的值
-{% highlight c# linenos %}
+
+```csharp
+
 public static class ConnectionStringHelper
 {
     static ConnectionStringHelper()
@@ -449,7 +460,8 @@ public static class ConnectionStringHelper
     }
 
 }
-{% endhighlight %}
+```
+
 6. 再做一个可视化后台界面，对这几个表进行增、删、改、查。
 
 ## 使用
