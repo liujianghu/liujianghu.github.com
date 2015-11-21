@@ -98,13 +98,14 @@ public class ConnectionString
 
 ```
 
+## 程序设计
+
 1. 上面几个表存储在mongodb中(可存储到任意数据库)。
 2. 修改每台服务器的 `C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\machine.config` 的connectionstrings节点， 增加一个connectionString, name = "config", connectionString为连接到mongodb的字符串。
 
-3. 获取当前服务器所在的环境
+3.  获取当前服务器所在的环境
 
 ```csharp
-
 
 public class ServerHelper
 {
@@ -159,10 +160,9 @@ public class ServerHelper
         ParentEnvId = env.ParentId;
     }
 }
-
 ```
 
-4. 获取ConfigValue的值
+4.  获取ConfigValue的值
 
 ```csharp
 
