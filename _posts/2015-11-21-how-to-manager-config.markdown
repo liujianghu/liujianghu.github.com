@@ -14,7 +14,7 @@ header-img: "img/post-bg-01.jpg"
 ## 基础表结构
 ### 环境表
 
-{% highlight c# linenos %}
+```csharp
 
 /// <summary>
 /// 这个表的意义就类似于sandbox的概念。
@@ -27,7 +27,7 @@ public class Env
     public string Name {get; set;}
     public int? ParentId {get; set;}
 }
-{% endhighlight %}
+```
 
 ### 服务器表
 
