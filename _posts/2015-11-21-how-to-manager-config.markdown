@@ -52,6 +52,7 @@ public class Server
 ```
 
 ### 键值配置表
+
 ```csharp
 
   /// <summary>
@@ -75,7 +76,7 @@ public class Server
 
 ### 数据库连接表
 
-```sharp
+```csharp
 
 /// <summary>
 /// 对应web.config的ConnectionString, 记录各个数据库的连接字符串
@@ -94,7 +95,7 @@ public class ConnectionString
     public bool IsActived {get; set;}
     public string Remark {get; set;}
 }
-{% endhighlight %}
+
 ```
 
 1. 上面几个表存储在mongodb中(可存储到任意数据库)。
