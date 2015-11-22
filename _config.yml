@@ -17,12 +17,12 @@ markdown: kramdown
 kramdown:
   input: GFM                            # use Github Flavored Markdown !important
   use_coderay: true
+  syntax_highlighter: rouge
 
-highlighter: pygments
+highlighter: rouge
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 permalink: pretty
-syntax_highlighter: rouge
 coderay:
     coderay_line_numbers:  nil
 
