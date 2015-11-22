@@ -21,6 +21,10 @@ highlighter: pygments
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 permalink: pretty
+use_coderay: true
+syntax_highlighter: rouge
+coderay:
+    coderay_line_numbers:  nil
 
 # Duoshuo settings
 duoshuo_username: liujianghu
