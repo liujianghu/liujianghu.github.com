@@ -16,7 +16,7 @@ tags:
 ## 基础表结构
 ### 环境表
 
-```csharp
+```
 
 /// <summary>
 /// 这个表的意义就类似于sandbox的概念。
@@ -33,7 +33,7 @@ public class Env
 
 ### 服务器表
 
-```csharp
+```
 
 /// <summary>
 /// 此表记录所有的服务器。
@@ -55,7 +55,7 @@ public class Server
 
 ### 键值配置表
 
-```csharp
+```
 
   /// <summary>
   /// 对应web.config的AppSetting, 健值配置
