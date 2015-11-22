@@ -23,8 +23,7 @@ pygments: true
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 permalink: pretty
-coderay:
-    coderay_line_numbers:  nil
+
 
 # Duoshuo settings
 duoshuo_username: liujianghu
