@@ -17,9 +17,9 @@ markdown: kramdown
 kramdown:
   input: GFM                            # use Github Flavored Markdown !important
   use_coderay: true
-  syntax_highlighter: rouge
 
-highlighter: rouge
+highlighter: pygments
+pygments: true
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 permalink: pretty
