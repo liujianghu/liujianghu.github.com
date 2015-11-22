@@ -2,7 +2,7 @@
 layout:     post
 title:      "使用Atom开发golang"
 subtitle:   "基于Windows上golang开发环境的配置(Atom)"
-date:       2015-10-19 21:00:00
+date:       2015-10-21 21:00:00
 author:     "极品拖拉机"
 header-img: "img/post-bg-01.jpg"
 tags:
