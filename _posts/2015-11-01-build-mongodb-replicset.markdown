@@ -32,6 +32,7 @@ chown -R mongod:mongod /data/mongod/log/mongod.log
 ```
 3.修改配置
    如果是执行第一步安装的，默认配置在/etc/mongod.conf. 如果是第二步安装的，则需要手动创建一个配置文件。  
+   
 ```yaml
     systemLog:
         destination: file
