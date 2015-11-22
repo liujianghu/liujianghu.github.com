@@ -21,6 +21,7 @@ tags:
 1. 下载，安装,参考  https://docs.mongodb.org/manual/tutorial/install-mongodb-on-red-hat/
   也可以直接下载执行包，直接运行。
 2. 创建数据存储目录
+
 ```shell
     mkdir /data/mongodb
     mkdir /data/mongodb/data
@@ -107,7 +108,7 @@ tags:
 	    rs.reconfig(cfg)
 ```
 4. 测试同步
-
+    
 ```shell
 
   use bookstore
@@ -138,12 +139,12 @@ tags:
 ```
 2. 停止各个mongodb服务。
 
-    ```shell
+```shell
 
     use admin
     db.shutdownServer();
 
-    ```
+```
 3. 生成ssl  keyfile文件
   * 执行openssl rand -base64 753. 会生成很大串一个字符串。
   * 保存ssl： 复制保存到  /data/mongodb/key
@@ -151,18 +152,20 @@ tags:
   * 修改文件的属主: chown mongod:mongod /data/mongodb/key
   * 把此文件内容复制到另外2台从节点上去。
 4.  修改mongod.conf配置启用安全认证
-  ```shell
+
+```shell
   security:
 	authorization: enabled
   keyFile: /data/mongodb/key
   ```
 5. 启动所有的节点
-  ```shell
+
+```shell
   mongodb --port 27017  #因为启用了安全认证，所有会提示没有权限。
 	use admin
 	db.auth("root","root");
 	rs.status();     #会发现所有的服务器已经在线。
-  ```
+```
 
 ## c#连接
 1. 写主的连接字符串： mongodb://bookuser:123456@192.168.0.1:27017/bookstore?replicaSet=mymongo&w=1
