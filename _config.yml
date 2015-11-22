@@ -2,9 +2,9 @@
 title: 刘江湖的博客
 header-img: img/home-bg.jpg
 email: liujianghu@outlook.com
-description: "极品拖拉机，刘江湖, golang, c#, web 开发,高性能，大数据, 互联网, .net"
+description: "极品拖拉机,刘江湖, golang, c#, web 开发, 高性能,大数据, 互联网, .net"
 baseurl: ""
-url: "http://liujianghu.github.io"
+url: "http://liujianghu.com"
 github_username:  liujianghu
 
 # Build settings
@@ -18,12 +18,9 @@ kramdown:
   input: GFM                            # use Github Flavored Markdown !important
 
 highlighter: pygments
-paginate: 5
+paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
 permalink: pretty
-exclude: [vendor]
 
 # Duoshuo settings
 duoshuo_username: liujianghu
