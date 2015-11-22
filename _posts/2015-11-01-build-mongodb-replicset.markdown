@@ -23,17 +23,16 @@ tags:
 2.创建数据存储目录
 
 ```shell
-    mkdir /data/mongodb
-    mkdir /data/mongodb/data
-    mkdir /data/mongodb/log
-    chown -R mongod:mongod /data/mongodb/data
-    nano /data/mongodb/log/mongod.log      #保存此文件
-    chown -R mongod:mongod /data/mongod/log/mongod.log
+mkdir /data/mongodb
+mkdir /data/mongodb/data
+mkdir /data/mongodb/log
+chown -R mongod:mongod /data/mongodb/data
+nano /data/mongodb/log/mongod.log      #保存此文件
+chown -R mongod:mongod /data/mongod/log/mongod.log
 ```
 3.修改配置
-   如果是执行第一步安装的，默认配置在/etc/mongod.conf. 如果是第二步安装的，则需要手动创建一个配置文件。
-
-   ```yaml
+   如果是执行第一步安装的，默认配置在/etc/mongod.conf. 如果是第二步安装的，则需要手动创建一个配置文件。  
+```yaml
     systemLog:
         destination: file
         logAppend: true
@@ -59,7 +58,7 @@ tags:
         oplogSizeMB: 500
         replSetName: rs0
 
-   ```
+```
 
 ## 配置Replic Set
 
@@ -150,7 +149,7 @@ rs.reconfig(cfg)
   * 设置文件的权限: chmod 6000 /data/mongodb/key
   * 修改文件的属主: chown mongod:mongod /data/mongodb/key
   * 把此文件内容复制到另外2台从节点上去。
-  
+
 4.修改mongod.conf配置启用安全认证
 
 ```shell
