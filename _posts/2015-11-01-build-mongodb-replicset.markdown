@@ -18,19 +18,19 @@ tags:
 
 ## 安装MongoDB
 
-1. 下载，安装,参考  https://docs.mongodb.org/manual/tutorial/install-mongodb-on-red-hat/
+1.下载，安装,参考  https://docs.mongodb.org/manual/tutorial/install-mongodb-on-red-hat/
   也可以直接下载执行包，直接运行。
-2. 创建数据存储目录
+2.创建数据存储目录
 
-    ```shell
+```shell
     mkdir /data/mongodb
     mkdir /data/mongodb/data
     mkdir /data/mongodb/log
     chown -R mongod:mongod /data/mongodb/data
     nano /data/mongodb/log/mongod.log      #保存此文件
     chown -R mongod:mongod /data/mongod/log/mongod.log
-    ```
-3. 修改配置
+```
+3.修改配置
    如果是执行第一步安装的，默认配置在/etc/mongod.conf. 如果是第二步安装的，则需要手动创建一个配置文件。
 
    ```yaml
@@ -63,13 +63,13 @@ tags:
 
 ## 配置Replic Set
 
-1. 启动master
+1.启动master
   在192.168.0.1上配置完成后，启动。（备注：我这里的时候，启动primary时，一定要先把secondary服务停掉，否则怎么都加不进来，被折腾了半天。）
 
 ```shell
 service mongod start   # (或者在下载的包里: bin/mongod -f mongod.conf)
 ```
-2.  初始化Replic Set
+2.初始化Replic Set
   连接Mongodb:
 
 ```shell
@@ -90,7 +90,7 @@ service mongod start   # (或者在下载的包里: bin/mongod -f mongod.conf)
   rs.initiate(config);
 ```
   这样就把本机加入到复制群里。 也可以直接执行rs.initiate();
-3. 启动其他2台机器后，再回到0.1 Master机器，连接到mongodb后，执行以下命令，加入2台SECONDARY:
+3.启动其他2台机器后，再回到0.1 Master机器，连接到mongodb后，执行以下命令，加入2台SECONDARY:
 
 ```shell
   rs.add("192.168.0.2");  
@@ -119,7 +119,7 @@ rs.reconfig(cfg)
 	再查询bookstore的数据是否已经同步过来。
 
 ## 启用安全认证
-1. 先在primary上，创建一个超级用户：
+1.先在primary上，创建一个超级用户：
 
 ```shell
 
@@ -136,7 +136,7 @@ rs.reconfig(cfg)
     });
 
 ```
-2. 停止各个mongodb服务。
+2.停止各个mongodb服务。
 
 ```shell
 
@@ -144,20 +144,21 @@ rs.reconfig(cfg)
     db.shutdownServer();
 
 ```
-3. 生成ssl  keyfile文件
+3.生成ssl  keyfile文件
   * 执行openssl rand -base64 753. 会生成很大串一个字符串。
   * 保存ssl： 复制保存到  /data/mongodb/key
   * 设置文件的权限: chmod 6000 /data/mongodb/key
   * 修改文件的属主: chown mongod:mongod /data/mongodb/key
   * 把此文件内容复制到另外2台从节点上去。
-4.  修改mongod.conf配置启用安全认证
+  
+4.修改mongod.conf配置启用安全认证
 
 ```shell
   security:
 	authorization: enabled
   keyFile: /data/mongodb/key
   ```
-5. 启动所有的节点
+5.启动所有的节点
 
 ```shell
   mongodb --port 27017  #因为启用了安全认证，所有会提示没有权限。
@@ -167,14 +168,14 @@ rs.reconfig(cfg)
 ```
 
 ## c#连接
-1. 写主的连接字符串： mongodb://bookuser:123456@192.168.0.1:27017/bookstore?replicaSet=mymongo&w=1
-2. 优先从secondary读取：  
+1.写主的连接字符串： mongodb://bookuser:123456@192.168.0.1:27017/bookstore?replicaSet=mymongo&w=1
+2.优先从secondary读取：  
 mongodb://bookuser:123456@192.168.0.2:27017/bookstore?replicaSet=mymongo&readPreference=secondaryPreferred
-3. 注意： 如果是字符串连接放入web.config的话，需要对&符号进行转义：   &amp;
-4. 关于连接字符串的配置，请参考：  https://docs.mongodb.org/manual/reference/connection-string/
+3.注意： 如果是字符串连接放入web.config的话，需要对&符号进行转义：   &amp;
+4.关于连接字符串的配置，请参考：  https://docs.mongodb.org/manual/reference/connection-string/
 
 #### 备注
-1. 有时候mongodb 会提示Getting connection refused because too many open connections: 819
+1.有时候mongodb 会提示Getting connection refused because too many open connections: 819
   * 修改ulimit -n
 
 ```shell
@@ -190,10 +191,10 @@ mongodb://bookuser:123456@192.168.0.2:27017/bookstore?replicaSet=mymongo&readPre
 ```shell
     numactl --interleave=all  bin/mongod -f mongod.conf
 ```
-2. 关于mongod配置文件的说明： https://docs.mongodb.org/manual/reference/configuration-options
-3. mongodb创建用户的说明： https://docs.mongodb.org/manual/tutorial/manage-users-and-roles/
-4. mongodb角色的说明： https://docs.mongodb.org/v3.0/reference/built-in-roles/#superuser-roles
-5. c# 连接mongodb的一些文档
+2.关于mongod配置文件的说明： https://docs.mongodb.org/manual/reference/configuration-options
+3.mongodb创建用户的说明： https://docs.mongodb.org/manual/tutorial/manage-users-and-roles/
+4.mongodb角色的说明： https://docs.mongodb.org/v3.0/reference/built-in-roles/#superuser-roles
+5.c# 连接mongodb的一些文档
   mongo c# linq document: http://mongodb.github.io/mongo-csharp-driver/1.10/linq/
   mongo c# driver document: https://docs.mongodb.org/getting-started/csharp/query/
   mongo c# driver 2.0 document: http://mongodb.github.io/mongo-csharp-driver/2.0/what_is_new/
