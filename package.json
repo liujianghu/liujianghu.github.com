@@ -3,7 +3,7 @@
     "title": "lake Blog",
     "version": "1.0.0",
     "homepage": "http://liujianghu.com",
-    "author": "lake.liu",
+    "author": "liujianghu",
     "license": {
         "type": "Apache 2.0",
         "url": "https://github.com/IronSummitMedia/startbootstrap/blob/gh-pages/LICENSE"
@@ -18,5 +18,9 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/IronSummitMedia/startbootstrap-clean-blog-jekyll.git"
+    },
+    "scripts": {
+        "preview": "cd _site; python -m SimpleHTTPServer 8020",
+        "watch": "grunt watch & npm run preview & jekyll serve -w;"
     }
 }

@@ -18,6 +18,7 @@ kramdown:
   input: GFM                            # use Github Flavored Markdown !important
   use_coderay: true
 
+highlighter: pygments
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 permalink: pretty
