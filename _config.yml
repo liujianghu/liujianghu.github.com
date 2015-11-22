@@ -8,7 +8,15 @@ url: "http://liujianghu.github.io"
 github_username:  liujianghu
 
 # Build settings
-markdown: redcarpet
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
 paginate: 5
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 redcarpet:
