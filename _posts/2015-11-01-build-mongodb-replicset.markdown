@@ -22,30 +22,26 @@ tags:
   也可以直接下载执行包，直接运行。
 2. 创建数据存储目录
 
-  ```shell
-
-  mkdir /data/mongodb
-  mkdir /data/mongodb/data
-  mkdir /data/mongodb/log
-
-  chown -R mongod:mongod /data/mongodb/data
-  nano /data/mongodb/log/mongod.log      #保存此文件
-  chown -R mongod:mongod /data/mongod/log/mongod.log
-  ```
+    ```shell
+    mkdir /data/mongodb
+    mkdir /data/mongodb/data
+    mkdir /data/mongodb/log
+    chown -R mongod:mongod /data/mongodb/data
+    nano /data/mongodb/log/mongod.log      #保存此文件
+    chown -R mongod:mongod /data/mongod/log/mongod.log
+    ```
 3. 修改配置
    如果是执行第一步安装的，默认配置在/etc/mongod.conf. 如果是第二步安装的，则需要手动创建一个配置文件。
 
-   ```shell
-
+   ```yaml
     systemLog:
-     destination: file
-     logAppend: true
-     quiet: true
-     path: /data/mongodb/log/mongod.log
-
+        destination: file
+        logAppend: true
+        quiet: true
+        path: /data/mongodb/log/mongod.log
     storage:
-     dbPath: /data/mongodb/data
-     journal:
+        dbPath: /data/mongodb/data
+        journal:
        enabled: true
      directoryPerDB: true
      engine: wiredTiger
@@ -64,8 +60,8 @@ tags:
         replSetName: rs0
 
    ```
+   
 ## 配置Replic Set
-
 
 1. 启动master
 
@@ -104,7 +100,7 @@ tags:
   然后执行rs.conf()可以看到其他的机器已经加入到replica set里。  执行rs.status()查看所有的状态。
   	如果正确的话，0.1,0.2的statusStr 应该是secodary.
   	修改各自的priority权重：
-       
+
     ```shell
       var cfg=rs.conf()
 	    cfg.members[0].priority = 4
