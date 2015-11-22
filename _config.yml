@@ -1,5 +1,5 @@
 # Site settings
-title: 极品拖拉机的博客
+title: 刘江湖的博客
 header-img: img/home-bg.jpg
 email: liujianghu@outlook.com
 description: "极品拖拉机，刘江湖, golang, c#, web 开发,高性能，大数据, 互联网, .net"
@@ -17,6 +17,7 @@ markdown: kramdown
 kramdown:
   input: GFM                            # use Github Flavored Markdown !important
 
+highlighter: pygments
 paginate: 5
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 redcarpet:
@@ -28,3 +29,5 @@ exclude: [vendor]
 duoshuo_username: liujianghu
 # Share component is depend on Comment so we can NOT use share only.
 duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+
+RSS: false
