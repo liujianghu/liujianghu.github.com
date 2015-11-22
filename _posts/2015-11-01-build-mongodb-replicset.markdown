@@ -67,7 +67,7 @@ tags:
   在192.168.0.1上配置完成后，启动。（备注：我这里的时候，启动primary时，一定要先把secondary服务停掉，否则怎么都加不进来，被折腾了半天。）
 
 ```shell
-    service mongod start   # (或者在下载的包里: bin/mongod -f mongod.conf)
+service mongod start   # (或者在下载的包里: bin/mongod -f mongod.conf)
 ```
 2.  初始化Replic Set
   连接Mongodb:
@@ -87,8 +87,7 @@ tags:
                       ]
            }
 
-     rs.initiate(config);
-
+  rs.initiate(config);
 ```
   这样就把本机加入到复制群里。 也可以直接执行rs.initiate();
 3. 启动其他2台机器后，再回到0.1 Master机器，连接到mongodb后，执行以下命令，加入2台SECONDARY:
@@ -103,12 +102,12 @@ tags:
   	修改各自的priority权重：
 
 ```shell
-      var cfg=rs.conf()
-	    cfg.members[0].priority = 4
-	    rs.reconfig(cfg)
+var cfg=rs.conf()
+cfg.members[0].priority = 4
+rs.reconfig(cfg)
 ```
 4. 测试同步
-    
+
 ```shell
 
   use bookstore
@@ -177,6 +176,7 @@ mongodb://bookuser:123456@192.168.0.2:27017/bookstore?replicaSet=mymongo&readPre
 #### 备注
 1. 有时候mongodb 会提示Getting connection refused because too many open connections: 819
   * 修改ulimit -n
+    
 ```shell
     nano /etc/security/limits.conf #添加如下：
     	*                soft    nofile          65535
