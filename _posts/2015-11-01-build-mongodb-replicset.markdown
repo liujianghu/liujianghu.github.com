@@ -23,6 +23,7 @@ tags:
 2. 创建数据存储目录
 
   ```shell
+
   mkdir /data/mongodb
   mkdir /data/mongodb/data
   mkdir /data/mongodb/log
@@ -34,7 +35,7 @@ tags:
 3. 修改配置
    如果是执行第一步安装的，默认配置在/etc/mongod.conf. 如果是第二步安装的，则需要手动创建一个配置文件。
 
-   ```yaml
+   ```shell
 
     systemLog:
      destination: file
@@ -69,16 +70,19 @@ tags:
 1. 启动master
 
   在192.168.0.1上配置完成后，启动。（备注：我这里的时候，启动primary时，一定要先把secondary服务停掉，否则怎么都加不进来，被折腾了半天。）
+
   ```shell
     service mongod start   # (或者在下载的包里: bin/mongod -f mongod.conf)
   ```
 2.  初始化Replic Set
   连接Mongodb:
+
   ```shell
   mongo --port 27017
   ```
   默认进入的是test数据库，执行如下命令：
   ```shell
+
   config = {
              "_id": "rs0",
              members: [
@@ -92,6 +96,7 @@ tags:
   ```
   这样就把本机加入到复制群里。 也可以直接执行rs.initiate();
 3. 启动其他2台机器后，再回到0.1 Master机器，连接到mongodb后，执行以下命令，加入2台SECONDARY:
+
   ```shell
   rs.add("192.168.0.2");  
   rs.add("192.168.0.3");  # 如果是Arbiter则： rs.add("192.168.0.3", {arbiterOnly: true});
@@ -99,6 +104,7 @@ tags:
   然后执行rs.conf()可以看到其他的机器已经加入到replica set里。  执行rs.status()查看所有的状态。
   	如果正确的话，0.1,0.2的statusStr 应该是secodary.
   	修改各自的priority权重：
+       
     ```shell
       var cfg=rs.conf()
 	    cfg.members[0].priority = 4
@@ -115,6 +121,7 @@ tags:
 
 ## 启用安全认证
 1. 先在primary上，创建一个超级用户：
+
   ```shell
   db.createUser(
     {
