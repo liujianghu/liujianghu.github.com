@@ -22,16 +22,15 @@ tags:
   也可以直接下载执行包，直接运行。
 2. 创建数据存储目录
 
-    ```shell
-
+```shell
     mkdir /data/mongodb
     mkdir /data/mongodb/data
     mkdir /data/mongodb/log
     chown -R mongod:mongod /data/mongodb/data
     nano /data/mongodb/log/mongod.log      #保存此文件
     chown -R mongod:mongod /data/mongod/log/mongod.log
+```
 
-    ```
 3. 修改配置
    如果是执行第一步安装的，默认配置在/etc/mongod.conf. 如果是第二步安装的，则需要手动创建一个配置文件。
 
@@ -68,11 +67,11 @@ tags:
 1. 启动master
   在192.168.0.1上配置完成后，启动。（备注：我这里的时候，启动primary时，一定要先把secondary服务停掉，否则怎么都加不进来，被折腾了半天。）
 
-  ```shell
+```shell
 
     service mongod start   # (或者在下载的包里: bin/mongod -f mongod.conf)
 
-  ```
+```
 2.  初始化Replic Set
   连接Mongodb:
 
@@ -145,7 +144,7 @@ tags:
 2. 停止各个mongodb服务。
 
     ```shell
-    
+
     use admin
     db.shutdownServer();
 
@@ -180,18 +179,19 @@ mongodb://bookuser:123456@192.168.0.2:27017/bookstore?replicaSet=mymongo&readPre
 #### 备注
 1. 有时候mongodb 会提示Getting connection refused because too many open connections: 819
   * 修改ulimit -n
-    ```shell
+```shell
     nano /etc/security/limits.conf #添加如下：
     	*                soft    nofile          65535
     	*                hard    nofile          65535
-    ```
+```
   * 在mongodb.conf节点下增加 maxIncomingConnections: 5000
-  * 因为mongodb3.0的语法是jaml, 所以每个格式后面都是加空格，不能按tab键。
+  * 因为mongodb3.0的语法是yaml, 所以每个格式后面都是加空格，不能按tab键。
   * 安装numactl命令： yum install -y numactl
   * 按第一步安装的时候，服务脚本里面已经加了numactl， 所以如果是手动启动的话，需要加上numactl:
-    ```shell
+
+```shell
     numactl --interleave=all  bin/mongod -f mongod.conf
-    ```
+```
 2. 关于mongod配置文件的说明： https://docs.mongodb.org/manual/reference/configuration-options
 3. mongodb创建用户的说明： https://docs.mongodb.org/manual/tutorial/manage-users-and-roles/
 4. mongodb角色的说明： https://docs.mongodb.org/v3.0/reference/built-in-roles/#superuser-roles
