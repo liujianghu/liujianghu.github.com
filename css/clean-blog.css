@@ -4,11 +4,7 @@
     padding-right: 5%;
   }
 }
-@media (min-width: 768px) {
-  .post-container {
-    padding-right: 5%;
-  }
-}
+
 .sidebar-container {
   color: #bfbfbf;
   font-size: 14px;

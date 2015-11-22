@@ -14,7 +14,7 @@ tags:
 为了偷懒，我采用了一个简单的思路，全局统一管理配置，把配置存储到数据库，然后项目在启动的时候，先从数据库读取到本地内存中，然后每次读取配置，都直接从内存中读取。
 
 ## 基础表结构
-### 环境表
+#### 环境表
 
 ```csharp
 
@@ -31,7 +31,7 @@ public class Env
 }
 ```
 
-### 服务器表
+#### 服务器表
 
 ```csharp
 
@@ -53,7 +53,7 @@ public class Server
 }
 ```
 
-### 键值配置表
+#### 键值配置表
 
 ```csharp
 
@@ -76,7 +76,7 @@ public class Server
   }
 ```
 
-### 数据库连接表
+#### 数据库连接表
 
 ```csharp
 
@@ -365,7 +365,7 @@ public static class ConfigValueHelper
 ```
 
 5. 获取ConnectionString的值
-
+ 
 ```csharp
 
 public static class ConnectionStringHelper
