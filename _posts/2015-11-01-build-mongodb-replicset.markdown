@@ -21,7 +21,6 @@ tags:
 1. 下载，安装,参考  https://docs.mongodb.org/manual/tutorial/install-mongodb-on-red-hat/
   也可以直接下载执行包，直接运行。
 2. 创建数据存储目录
-
 ```shell
     mkdir /data/mongodb
     mkdir /data/mongodb/data
@@ -30,7 +29,6 @@ tags:
     nano /data/mongodb/log/mongod.log      #保存此文件
     chown -R mongod:mongod /data/mongod/log/mongod.log
 ```
-
 3. 修改配置
    如果是执行第一步安装的，默认配置在/etc/mongod.conf. 如果是第二步安装的，则需要手动创建一个配置文件。
 
@@ -68,20 +66,17 @@ tags:
   在192.168.0.1上配置完成后，启动。（备注：我这里的时候，启动primary时，一定要先把secondary服务停掉，否则怎么都加不进来，被折腾了半天。）
 
 ```shell
-
     service mongod start   # (或者在下载的包里: bin/mongod -f mongod.conf)
-
 ```
 2.  初始化Replic Set
   连接Mongodb:
 
-  ```shell
+```shell
   mongo --port 27017
-  ```
+```
   默认进入的是test数据库，执行如下命令：
 
-  ```shell
-
+```shell
   config = {
              "_id": "rs0",
              members: [
@@ -93,32 +88,32 @@ tags:
 
      rs.initiate(config);
 
-  ```
+```
   这样就把本机加入到复制群里。 也可以直接执行rs.initiate();
 3. 启动其他2台机器后，再回到0.1 Master机器，连接到mongodb后，执行以下命令，加入2台SECONDARY:
 
-  ```shell
+```shell
   rs.add("192.168.0.2");  
   rs.add("192.168.0.3");  # 如果是Arbiter则： rs.add("192.168.0.3", {arbiterOnly: true});
 
-  ```
+```
   然后执行rs.conf()可以看到其他的机器已经加入到replica set里。  执行rs.status()查看所有的状态。
   	如果正确的话，0.1,0.2的statusStr 应该是secodary.
   	修改各自的priority权重：
 
-    ```shell
+```shell
       var cfg=rs.conf()
 	    cfg.members[0].priority = 4
 	    rs.reconfig(cfg)
-    ```
+```
 4. 测试同步
 
-  ```shell
+```shell
 
   use bookstore
 	db.books.insert({"title":"男人和女人的故事", "elapsedms":600000});
 
-  ```
+```
   切换到任意secondary机器上，连接mongodb: mongod --port 27017
 	默认从节点是不能执行查询操作的，执行如下命令：db.getMongo().setSlaveOk();
 	再查询bookstore的数据是否已经同步过来。
@@ -126,7 +121,7 @@ tags:
 ## 启用安全认证
 1. 先在primary上，创建一个超级用户：
 
-  ```shell
+```shell
 
   db.createUser(
     {
@@ -140,7 +135,7 @@ tags:
       ]
     });
 
-  ```
+```
 2. 停止各个mongodb服务。
 
     ```shell
