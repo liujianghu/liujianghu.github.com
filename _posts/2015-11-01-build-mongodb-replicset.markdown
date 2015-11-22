@@ -21,7 +21,6 @@ tags:
 1. 下载，安装,参考  https://docs.mongodb.org/manual/tutorial/install-mongodb-on-red-hat/
   也可以直接下载执行包，直接运行。
 2. 创建数据存储目录
-
 ```shell
     mkdir /data/mongodb
     mkdir /data/mongodb/data
@@ -176,7 +175,7 @@ mongodb://bookuser:123456@192.168.0.2:27017/bookstore?replicaSet=mymongo&readPre
 #### 备注
 1. 有时候mongodb 会提示Getting connection refused because too many open connections: 819
   * 修改ulimit -n
-    
+
 ```shell
     nano /etc/security/limits.conf #添加如下：
     	*                soft    nofile          65535
