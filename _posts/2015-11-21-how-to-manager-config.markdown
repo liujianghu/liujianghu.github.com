@@ -3,7 +3,7 @@ layout:     post
 title:      "可视化管理各种配置"
 subtitle:   "解决.NET项目配置文件种配置多、乱、杂的问题."
 date:       2015-10-21 16:00:00
-author:     "极品拖拉机"
+author:     "刘江湖"
 header-img: "img/post-bg-01.jpg"
 tags:
     - .net

@@ -1,9 +1,9 @@
 ---
 layout:     post
 title:      "使用Atom开发golang"
-subtitle:   "基于Windows上golang开发环境的配置(Atom)"
+subtitle:   "在Windows上使用Atom编辑器开发golang"
 date:       2015-10-21 21:00:00
-author:     "极品拖拉机"
+author:     "刘江湖"
 header-img: "img/post-bg-01.jpg"
 tags:
     - golang

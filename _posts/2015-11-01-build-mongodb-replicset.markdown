@@ -3,7 +3,7 @@ layout:     post
 title:      "搭建Mongodb复制功能"
 subtitle:   "在Centos 6.5上搭建MongoDb 3.0复制(读写分离)功能"
 date:       2015-11-01 19:00:00
-author:     "极品拖拉机"
+author:     "刘江湖"
 header-img: "img/post-bg-01.jpg"
 tags:
     - nosql
@@ -32,7 +32,7 @@ chown -R mongod:mongod /data/mongod/log/mongod.log
 ```
 3.修改配置
    如果是执行第一步安装的，默认配置在/etc/mongod.conf. 如果是第二步安装的，则需要手动创建一个配置文件。  
-   
+
 ```yaml
     systemLog:
         destination: file
