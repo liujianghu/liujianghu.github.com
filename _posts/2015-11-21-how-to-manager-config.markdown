@@ -17,8 +17,7 @@ tags:
 
 ##### 环境表
 
-{% highlight java linenos %}
-
+```csharp
 /// <summary>
 /// 这个表的意义就类似于sandbox的概念。
 /// 每个环境都可以有自己的配置值，如果当前环境没有找到对应的配置，则找到其父节环境的配置。
@@ -30,13 +29,11 @@ public class Env
     public string Name {get; set;}
     public int? ParentId {get; set;}
 }
-
-{% endhighlight %}
+```
 
 ##### 服务器表
 
 ```csharp
-
 /// <summary>
 /// 此表记录所有的服务器。
 /// </summary>
@@ -58,7 +55,6 @@ public class Server
 ##### 键值配置表
 
 ```csharp
-
   /// <summary>
   /// 对应web.config的AppSetting, 健值配置
   /// </summary>
@@ -81,7 +77,6 @@ public class Server
 ##### 数据库连接表
 
 ```csharp
-
 /// <summary>
 /// 对应web.config的ConnectionString, 记录各个数据库的连接字符串
 /// </summary>
@@ -107,10 +102,9 @@ public class ConnectionString
 1. 上面几个表存储在mongodb中(可存储到任意数据库)。
 2. 修改每台服务器的 `C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\machine.config` 的connectionstrings节点， 增加一个connectionString, name = "config", connectionString为连接到mongodb的字符串。
 
-3.  获取当前服务器所在的环境
+##### 获取当前服务器所在的环境
 
 ```csharp
-
 public class ServerHelper
 {
     static ServerHelper()
@@ -166,10 +160,9 @@ public class ServerHelper
 }
 ```
 
-4.  获取ConfigValue的值
+##### 获取ConfigValue的值
 
 ```csharp
-
 /// <summary>
 /// 获取appsetting配置的值
 /// </summary>
@@ -366,10 +359,9 @@ public static class ConfigValueHelper
 }
 ```
 
-5. 获取ConnectionString的值
+##### 获取ConnectionString的值
 
 ```csharp
-
 public static class ConnectionStringHelper
 {
     static ConnectionStringHelper()
