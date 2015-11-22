@@ -21,14 +21,15 @@ tags:
 1. 下载，安装,参考  https://docs.mongodb.org/manual/tutorial/install-mongodb-on-red-hat/
   也可以直接下载执行包，直接运行。
 2. 创建数据存储目录
-```shell
+
+    ```shell
     mkdir /data/mongodb
     mkdir /data/mongodb/data
     mkdir /data/mongodb/log
     chown -R mongod:mongod /data/mongodb/data
     nano /data/mongodb/log/mongod.log      #保存此文件
     chown -R mongod:mongod /data/mongod/log/mongod.log
-```
+    ```
 3. 修改配置
    如果是执行第一步安装的，默认配置在/etc/mongod.conf. 如果是第二步安装的，则需要手动创建一个配置文件。
 
