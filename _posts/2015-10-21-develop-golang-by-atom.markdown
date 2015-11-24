@@ -83,3 +83,12 @@ go install -v code.google.com/p/rog-go/exp/cmd/godef
 ### 总结
 至此大功告成，可以享受Atom开发golang的便捷性了。
 注： 好像visual studio code也支持go的插件的，但目前还不够完善。
+附：
+1. 一些比较好的package：
+    * minimap — 用过Sublime Text的友友们都知道有一个很实用的功能,就是内部编辑那里有一个小小的代码图
+    * file-icons — 增加许多图标,在侧边蓝文件名前面的icon
+    * color-picker — 取色器,太赞了有木有,,比sublime那个好用,不卡,启动超快
+2. theme:
+    * seti-UI
+    * monokai-flat
+    * monokai
