@@ -93,8 +93,8 @@ service mongod start   # (或者在下载的包里: bin/mongod -f mongod.conf)
 3.启动其他2台机器后，再回到0.1 Master机器，连接到mongodb后，执行以下命令，加入2台SECONDARY:
 
 ```shell
-  rs.add("192.168.0.2");  
-  rs.add("192.168.0.3");  # 如果是Arbiter则： rs.add("192.168.0.3", {arbiterOnly: true});
+  rs.add("192.168.0.2:27017");  
+  rs.add("192.168.0.3:27017");  # 如果是Arbiter则： rs.add("192.168.0.3:27017", {arbiterOnly: true});
 
 ```
   然后执行rs.conf()可以看到其他的机器已经加入到replica set里。  执行rs.status()查看所有的状态。
@@ -106,6 +106,8 @@ var cfg=rs.conf()
 cfg.members[0].priority = 4
 rs.reconfig(cfg)
 ```
+
+这一步记得关掉防火墙，或者配置防火墙的端口。
 4. 测试同步
 
 ```shell
@@ -170,7 +172,7 @@ rs.reconfig(cfg)
 ## c#连接
 1.写主的连接字符串： mongodb://bookuser:123456@192.168.0.1:27017/bookstore?replicaSet=mymongo&w=1
 2.优先从secondary读取：  
-mongodb://bookuser:123456@192.168.0.2:27017/bookstore?replicaSet=mymongo&readPreference=secondaryPreferred
+mongodb://bookuser:123456@192.168.0.2:27017,192.168.0.3:27017/bookstore?replicaSet=mymongo&readPreference=secondaryPreferred
 3.注意： 如果是字符串连接放入web.config的话，需要对&符号进行转义：   `&amp;`
 4.关于连接字符串的配置，请参考：  https://docs.mongodb.org/manual/reference/connection-string/
 
