@@ -106,7 +106,6 @@ var cfg=rs.conf()
 cfg.members[0].priority = 4
 rs.reconfig(cfg)
 ```
-
 这一步记得关掉防火墙，或者配置防火墙的端口。
 4. 测试同步
 
@@ -173,6 +172,7 @@ rs.reconfig(cfg)
 1.写主的连接字符串： mongodb://bookuser:123456@192.168.0.1:27017/bookstore?replicaSet=mymongo&w=1
 2.优先从secondary读取：  
 mongodb://bookuser:123456@192.168.0.2:27017,192.168.0.3:27017/bookstore?replicaSet=mymongo&readPreference=secondaryPreferred
+
 3.注意： 如果是字符串连接放入web.config的话，需要对&符号进行转义：   `&amp;`
 4.关于连接字符串的配置，请参考：  https://docs.mongodb.org/manual/reference/connection-string/
 
