@@ -90,6 +90,7 @@ service mongod start   # (或者在下载的包里: bin/mongod -f mongod.conf)
   rs.initiate(config);
 ```
   这样就把本机加入到复制群里。 也可以直接执行rs.initiate();
+  
 3.启动其他2台机器后，再回到0.1 Master机器，连接到mongodb后，执行以下命令，加入2台SECONDARY（这一步记得关掉防火墙，或者配置防火墙的端口）:
 
 ```shell
